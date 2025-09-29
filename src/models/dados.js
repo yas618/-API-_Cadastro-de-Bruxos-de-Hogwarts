@@ -10,7 +10,7 @@ const bruxos = [
         especialidade: "Sobreviver a Voldemort 😎",
     },
     {
-        id: 2,
+        id: 20,
         nome: "Hermione Granger",
         casa: "Grifinória",
         ano: 7,

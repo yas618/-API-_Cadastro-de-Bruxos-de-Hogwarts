@@ -39,7 +39,7 @@ const createBruxo = (req, res) => {
     if (!nome || !casa || !varinha) {
         return res.status(400).json({
             success: false,
-            message: "Nome, casa e varinha são obrigatórios"
+            message: "Feitiço mal executado! Verifique os ingredientes"
         });
     }
 
@@ -76,7 +76,7 @@ const deleteBruxo = (req, res) => {
     if (!bruxoParaRemover) {
         return res.status(404).json({
             success: false,
-            message: `Bruxo com o ID ${id} não existe`
+            message: `Não é possível apagar o que não existe`
         });
     }
 
@@ -85,7 +85,7 @@ const deleteBruxo = (req, res) => {
 
     res.status(200).json({
         success: true,
-        message: `O bruxo com ID ${id} foi removido com sucesso`
+        message: "Bruxo expulso de Hogwarts com sucesso!"
     });
 };
 
@@ -106,7 +106,7 @@ const updateBruxo = (req, res) => {
     if (!bruxoExiste) {
         return res.status(404).json({
             success: false,
-            message: `O bruxo com o ID ${id} não foi encontrado`
+            message: 'Não é possível reparar o que não existe'
         });
     }
 
